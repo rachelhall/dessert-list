@@ -1,0 +1,189 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #282c34;
+}
+
+header {
+  color: #fff;
+  padding: 33px 0 25px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  
+}
+
+.fa {
+  font-size: 22px;
+  transform: translateY(50deg);  
+}
+
+header i {
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.add-item {
+  margin-bottom: 34px;
+  width: 300px;
+  margin: auto;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-item button {
+  display: block;
+  padding: 0 15px  15px 15px;
+  text-align: center;
+}
+
+.add-item form {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+input {
+  font-size: 22px;
+  color: #000;
+  padding: 18px 22px;
+  font-size: 16px;
+  margin-bottom: 17px;
+  border: 0;
+  display: block;
+  width: 100%;  
+}
+
+li {
+  list-style-type: none;
+  color: #FFF;
+    background-color: rgba(52,73,94);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color .2s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+li:hover {
+  background-color: black;
+    cursor: pointer;
+}
+  
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+li h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  padding: 15px 15px 0 15px;
+  overflow: hidden;
+}
+
+li p {
+  padding: 15px;
+}
+
+form button {
+  
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  padding: 5px;
+}
+
+button:hover {
+  color: red;
+}
+
+button:focus {outline:0;}
+
+ul {
+  padding-inline-start: 0;
+}
+p {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.user-profile {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.who-says {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+
+}
+
+.contributor {
+  display: flex;
+ align-items: center;
+    justify-content: flex-end;
+}
+
+.auth {
+  border-radius: 5px;
+  border: 1px solid white;
+  vertical-align: middle;
+  margin: 15px;
+}
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
