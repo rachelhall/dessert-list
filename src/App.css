@@ -112,7 +112,7 @@ li h3 {
   color: #fff;
   font-weight: 300;
   padding: 15px 15px 0 15px;
-  overflow: hidden;
+  word-wrap: break-word;
 }
 
 li p {
