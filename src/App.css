@@ -32,8 +32,6 @@ header i {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -69,6 +67,15 @@ header i {
   width: 100%;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+}
+
+.add-item input {
+  color: white;
+}
+
+.add-item form button {
+  color: white;
 }
 
 input {
@@ -186,4 +193,21 @@ p {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.description {
+  margin: auto;
+  max-width: 50%;
+  padding-top: 40px;
+  padding-bottom: 10%;
+}
+
+@media only screen and (max-width: 800px) {
+
+.user-profile {
+  display: none;
+}
+.description {
+  max-width: 90%;
+}
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase, { auth, provider } from './firebase';
-import FlipMove from "react-flip-move"
+import FlipMove from "react-flip-move";
+import ImageUploader from "./components/ImageUploader"
 
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
       currentItem: '',
       username: '',
       items: [],
-      user: null
+      user: null,
+      image: null
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,7 +40,8 @@ class App extends Component {
           id: item,
           title: items[item].title,
           user: items[item].user,
-          avatar: items[item].avatar
+          avatar: items[item].avatar,
+          image: null
         });
       }
       console.log('new item updated', { newState });
@@ -78,7 +81,8 @@ class App extends Component {
     const item = {
       title: this.state.currentItem,
       user: this.state.user.displayName || this.state.user.email,
-      avatar: this.state.user.photoURL || null
+      avatar: this.state.user.photoURL || null,
+      
     }
     itemsRef.push(item);
     this.setState({
@@ -124,6 +128,7 @@ class App extends Component {
             onChange={this.handleChange} 
             value={this.state.currentItem} 
           />
+            <ImageUploader />
         </form>
         </section>
         <div className='container'>
@@ -152,13 +157,20 @@ class App extends Component {
       </ul>
     </div>
   </section>
+  <section className="description">
+    <p>The List uses React and Google Firebase to dynamically update a list for each individual user who logins using Google authentication. When a user signs in, The List maps over all of the items stored in that users branch of items in firebase and updates state to display each item. It also stores the users google photo URL when an item is submitted so that it can be displayed at the end of each item.</p>
+  </section>
 
 </div>
     </div>
     :
     <div className='wrapper'>
       <p>You must be logged in to see the fun!</p>
+      <section className="description">
+    <p>The List uses React and Google Firebase to dynamically update a list for each individual user who logins using Google authentication. When a user signs in, The List maps over all of the items stored in that users branch of items in firebase and updates state to display each item. It also stores the users google photo URL when an item is submitted so that it can be displayed at the end of each item.</p>
+  </section>
     </div>
+    
   }
   
 </div>
