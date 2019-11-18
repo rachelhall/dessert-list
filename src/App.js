@@ -128,7 +128,7 @@ class App extends Component {
             onChange={this.handleChange} 
             value={this.state.currentItem} 
           />
-            <ImageUploader />
+            {/* <ImageUploader /> */}
         </form>
         </section>
         <div className='container'>
